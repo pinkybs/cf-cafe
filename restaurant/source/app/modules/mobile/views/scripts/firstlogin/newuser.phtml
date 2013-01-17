@@ -1,0 +1,71 @@
+{%include file="header.phtml"%}
+
+<div id="container">
+        <div id="body">
+                <div class="label" style="text-align:center;">
+                        <img src="{%$staticUrl%}/apps/restaurant/mobile/img/logo.gif" />
+                </div>
+                <div class="restaurant">
+                        <div style="text-align:center;font-size:x-small">
+                            <a href='{% "$baseUrl/firstlogin/characterselect"|mixiurl %}'>{% emoji code="F98B" %}ﾚｽﾄﾗﾝOPEN!</a>
+                        </div>
+                </div><!--/.restaurant-->
+                <table><tr><td></td></tr></table>
+
+                <div id="res_detail">
+                        <div style="text-align:center;font-size:medium">
+                                {% $_appName %}とは？
+                        </div>
+                        <table><tr><td></td></tr></table>
+                        <div style="text-align:left;font-size:xx-small">
+                                目指すは自分だけのｶﾌｪﾚｽﾄﾗﾝ{% emoji code="F99F" %}本格的なﾚｼﾋﾟで一流ｼｪﾌも夢じゃない{% emoji code="F9CF" %}友達誘ってﾚｼﾋﾟｹﾞｯﾄ{% emoji code="F99A" %}
+                        </div>
+                </div><!--/#res_detail-->
+                <table><tr><td></td></tr></table>
+                <div id="new_user">
+                        <div style="text-align:center;font-size:xx-small;background:#008886;color:#FFF">
+                                ｹﾞｰﾑ紹介
+                        </div>
+                        <div class="new_detail" style="clear:both;font-size:xx-small;" clear="all">
+                                <img src="{%$staticUrl%}/apps/restaurant/mobile/img/new.gif" style="float:left;margin:5px" align="left" />
+                                今日のｼｪﾌお勧め料理は何かな{% emoji code="F9A8" %}<br />
+                                あなたのお勧め料理を登録しよう{% emoji code="F9CE" %}
+                                <div style="clear:both;" clear="all">
+                                        <img src="{%$staticUrl%}/apps/restaurant/mobile/img/green_line.gif" width="100%" height="2px" style="margin-top:3px;" />
+                                </div>
+                        </div><!--/.new_detail-->
+                        <div class="new_detail" style="background:#ffffdd;font-size:xx-small;">
+                                <img src="{%$staticUrl%}/apps/restaurant/mobile/img/new.gif" style="float:left;margin:5px" align="left" />
+                                覚えた料理はもちろんﾚｼﾋﾟ付き{% emoji code="F99F" %}<br />
+                                本格料理のﾚｼﾋﾟを覚えちゃおう{% emoji code="F9A9" %}
+                                <div style="clear:both;" clear="all">
+                                        <img src="{%$staticUrl%}/apps/restaurant/mobile/img/green_line.gif" width="100%" height="2px" style="margin-top:3px;" />
+                                </div>
+                        </div><!--/.new_detail-->
+                        <div class="new_detail" style="font-size:xx-small;">
+                                <img src="{%$staticUrl%}/apps/restaurant/mobile/img/new.gif" style="float:left;margin:5px" align="left" />
+                                友達のﾚｽﾄﾗﾝで舌の修行{% emoji code="F9A8" %}<br />
+                                いっぱい食べて味を盗んじゃえ{% emoji code="F99B" %}
+                                <div style="clear:both;" clear="all">
+                                        <img src="{%$staticUrl%}/apps/restaurant/mobile/img/green_line.gif" width="100%" height="2px" style="margin-top:3px;" />
+                                </div>
+                        </div><!--/.new_detail-->
+                        <div class="new_detail" style="background:#ffffdd;font-size:xx-small;">
+                                <img src="{%$staticUrl%}/apps/restaurant/mobile/img/new.gif" style="float:left;margin:5px" align="left" />
+                                料理の味は素材から{% emoji code="F89F" %}<br />
+                                今日の材料はﾐﾆｹﾞｰﾑでGETだよ{% emoji code="F995" %}
+                                <div style="clear:both;" clear="all">
+                                        <img src="{%$staticUrl%}/apps/restaurant/mobile/img/green_line.gif" width="100%" height="2px" style="margin-top:3px;" />
+                                </div>
+                        </div><!--/.new_detail-->
+                </div><!--/#new_user-->
+                <div class="">
+                        <div style="text-align:center;font-size:medium">
+                                <a href='{% "$baseUrl/firstlogin/characterselect"|mixiurl %}'>{% emoji code="F98B" %}ﾚｽﾄﾗﾝOPEN!</a>
+                        </div>
+                </div><!--/.restaurant-->
+                <table><tr><td></td></tr></table>
+        </div><!--/#body-->
+</div><!--/#container-->
+
+{%include file="footer.phtml"%}

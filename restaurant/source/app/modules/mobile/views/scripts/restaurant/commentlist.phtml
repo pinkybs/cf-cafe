@@ -1,0 +1,31 @@
+{%include file="header.phtml"%}
+
+<div id="container">
+        <div id="body">
+                <div id="comment">
+                        <div style="font-size:x-small;background:#f6f6f6;">
+                                <img src="{%$staticUrl%}/apps/restaurant/mobile/img/h.gif" width="5px" height="17px" style="float:left;margin-right:2px" align="left" />
+                                来店コメント
+                                <div style="clear:both;" clear="all">
+                                <img src="{%$staticUrl%}/apps/restaurant/mobile/img/line.gif" width="100%" height="1px" />
+                                </div>
+                        </div>
+                        <table><tr><td></td></tr></table>
+                        <div class="comment_list">
+
+                        {% foreach from=$commentList item=comment %}
+                                <div style="text-align:left;font-size:xx-small">
+                                    <img src="{%$staticUrl%}/apps/restaurant/mobile/img/character/{%$comment.character%}.gif" style="margin:3px;float:left;" align="left"/>
+                                    {%$comment.board|unescape_emoji%}<br />
+                                    {%$comment.displayName%}{%if $uid == $proUid%}<a href='{% "$baseUrl/mobile/restaurant/deletecomment?CF_id=`$comment.id`&CF_fromaction=list"|mixiurl %}'>削除</a>{%/if%}({%$comment.format_board_time%})
+                                </div>
+                                <div style="clear:both" clear="all">
+                                        <img src="{%$staticUrl%}/apps/restaurant/mobile/img/green_line.gif" width="100%" height="2px" style="margin-top:3px;margin-bottom:3px;" />
+                                </div>
+                        {% /foreach %}
+                        </div><!--/.comment_list-->
+                </div>
+        </div><!--/#body-->
+</div><!--/#continar-->
+
+{%include file="footer.phtml"%}

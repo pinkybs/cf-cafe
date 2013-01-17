@@ -1,0 +1,59 @@
+{%include file="header.phtml"%}
+
+<div id="container">
+        <div id="body">
+                <div style="background:#60dfff;text-align:center;font-size:xx-small;color:#FFF">
+                        <img src="{%$staticUrl%}/apps/restaurant/mobile/img/h_menu.gif" width="240" height="30" />
+                </div>
+                <table><tr><td></td></tr></table>
+                <div style="text-align:center;font-size:xx-small">
+                    {% foreach from=$userGenre item=genre name=foreachGenre %}
+                        {% if $genre.has %}
+                        <a href='{% "$baseUrl/restaurant/menulist/CF_genre/`$genre.genre`"|mixiurl %}'>{%$genre.name%}</a>
+                        {% else %}
+                        {%$genre.name%}
+                        {% /if %}
+                        
+                        {% if $smarty.foreach.foreachGenre.iteration == 5 %}<br />
+                        {% else %}
+                        {% if !$smarty.foreach.foreachGenre.last%}/{% /if %}
+                        {% /if %}
+                    {% /foreach %}
+                </div>
+                <table><tr><td></td></tr></table>
+                <div id="menu_list">
+                        <div style="font-size:x-small;background:#f6f6f6;">
+                                <img src="{%$staticUrl%}/apps/restaurant/mobile/img/h.gif" width="5px" height="17px" style="float:left;margin-right:2px" align="left" />
+                                サラダ
+                                <div style="clear:both;" clear="all">
+                                <img src="{%$staticUrl%}/apps/restaurant/mobile/img/line.gif" width="100%" height="1px" />
+                                </div>
+                        </div>
+                        <table><tr><td></td></tr></table>
+                        <div style="text-align:center;font-size:xx-small">
+                                <span style="color:#F00">{%$foodCount%}</span>/10
+                        </div>
+                        <table><tr><td></td></tr></table>
+                        <div class="cook_sum" style="width:240;margin:auto;text-align:center;background:#">
+                            <div style="text-align:center;">
+                            {% foreach from=$food item=foodItem name=foreachFood %}               
+                                
+                                {% if $foodItem.food %}
+                                <a href='{% "$baseUrl/restaurant/menuconfirm/CF_food/`$foodItem.food`"|mixiurl %}'><img src="{%$staticUrl%}/apps/restaurant/mobile/img/food_sum/{%$foodItem.food%}.gif" width="70" style="border:1px;border-color:#CCC;border-style:solid;margin:1px;margin-bottom:5px" /></a>
+                                {% else %}
+                                <img src="{%$staticUrl%}/apps/restaurant/mobile/img/question.gif" width="70" style="border:1px;border-color:#CCC;border-style:solid;margin:1px;margin-bottom:5px" />
+                                {% /if %}
+                                
+                                {% if $smarty.foreach.foreachFood.iteration % 3 == 0 %}
+                                </div><div style="text-align:center;">
+                                {% /if %}
+                                
+                            {% /foreach %}
+                            </div>
+                        </div>
+                        <table><tr><td></td></tr></table>
+                </div><!--/#menu_list-->
+        </div>
+</div>
+
+{%include file="footer.phtml"%}

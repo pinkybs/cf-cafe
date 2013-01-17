@@ -1,0 +1,45 @@
+{%include file="header.phtml"%}
+
+<div id="container">
+        <div id="body">
+                <div class="label">
+                        <div style="background:#69ac16;text-align:center;font-size:xx-small;color:#FFF">
+                                ｱｲﾃﾑ一覧
+                        </div>
+                </div>
+                <table><tr><td></td></tr></table>
+                <div class="shop_menu" style="text-align:center;font-size:xx-small">
+                        <div style="text-align:center;">
+                                <img src="{%$staticUrl%}/apps/restaurant/mobile/img/dotted.gif" width="240px" height="1px" style="margin-top:3px;margin-bottom:3px;" />
+                        </div>
+                        <a href='{% "$baseUrl/mobile/item/itemlist?CF_type=1"|mixiurl %}'>時短ｱｲﾃﾑ</a>/
+                        <a href='{% "$baseUrl/mobile/item/itemlist?CF_type=2"|mixiurl %}'>増加ｱｲﾃﾑ</a>/
+                        <a href='{% "$baseUrl/mobile/item/itemlist?CF_type=3"|mixiurl %}'>ﾚｼﾋﾟ本</a>/
+                        <a href="">まかない</a>
+                        <div style="text-align:center;">
+                                <img src="{%$staticUrl%}/apps/restaurant/mobile/img/dotted.gif" width="240px" height="1px" style="margin-top:3px;margin-bottom:3px;" />
+                        </div>
+                </div>
+                <table><tr><td></td></tr></table>
+                <div id="item_list">
+                    {% foreach from=$userItemsList item=item key=index %}
+                        <div style="text-align:left;margin:auto;width:240px">
+                                <img src="{%$staticUrl%}/apps/restaurant/mobile/img/decoration/14.gif" style="float:left;margin-right:5px" align="left" />
+                                {% $item.name %}<br />
+                                現在の所持数:{% $item.item_count %}個<br />
+                                <div style="clear:both" clear="all">
+                                {% $item.description %}
+                                </div>
+                                <div style="text-align:right;">
+                                        <a href='{% "$baseUrl/mobile/item/itemdetail?CF_item_id=`$item.id`"|mixiurl %}'>使用する</a>
+                                </div>
+                        </div>
+                        <img src="{%$staticUrl%}/apps/restaurant/mobile/img/green_line.gif" width="100%" height="2px" style="margin-top:3px;margin-bottom:3px" />
+                    {% /foreach %}
+
+                <table><tr><td></td></tr></table>
+                </div><!--/#shop_list-->
+        </div>
+</div>
+
+{%include file="footer.phtml"%}

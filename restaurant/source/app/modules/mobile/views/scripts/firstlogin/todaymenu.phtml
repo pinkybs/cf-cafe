@@ -1,0 +1,58 @@
+{%include file="header.phtml"%}
+
+<div id="container">
+        <div id="body">
+                <div style="background:#69ac16;text-align:center;font-size:xx-small;color:#FFF">
+                        料理リスト
+                        <img src="{%$staticUrl%}/apps/restaurant/mobile/img/label_line.gif" width="100%" height="10px" />
+                </div>
+                <table><tr><td></td></tr></table>
+                <div style="text-align:left;font-size:xx-small">
+                        <img src="{%$staticUrl%}/apps/restaurant/mobile/img/npc.gif" style="float:left;margin:5px" align="left" />
+                        ふむふむ。覚えているのはﾌﾟﾚｰﾝｵﾑﾚﾂだね{% emoji code="F995" %}<br />
+                        これをﾒﾆｭｰに登録しようか{% emoji code="F9A0" %}
+                </div>
+                <div style="text-align:center;font-size:xx-small;clear:both;" clear="all">
+                        ｻﾗﾀﾞ/前菜/ｽｰﾌﾟ/ﾒｲﾝ他/ﾒｲﾝ魚<br />
+                        ﾒｲﾝ肉/ﾋﾟｻﾞ/ﾘｿﾞｯﾄ/ﾊﾟｽﾀ
+                </div>
+                <table><tr><td></td></tr></table>
+                <div id="menu_list">
+                        <div style="font-size:x-small;background:#f6f6f6;">
+                                <img src="{%$staticUrl%}/apps/restaurant/mobile/img/h.gif" width="5px" height="17px" style="float:left;margin-right:2px" align="left" />
+                                サラダ                                
+                                <div style="clear:both;" clear="all">
+                                <img src="{%$staticUrl%}/apps/restaurant/mobile/img/line.gif" width="100%" height="1px" />
+                                </div>
+                        </div>
+                        <table><tr><td></td></tr></table>
+                        <div style="text-align:center;font-size:xx-small">
+                                <span style="color:#F00">1</span>/10
+                        </div>
+                        <table><tr><td></td></tr></table>
+                        <div class="cook_sum" style="width:240;margin:auto;text-align:center;background:#">
+                            <div style="text-align:center;">
+                                <a href='{% "$baseUrl/firstlogin/todaymenuconfirm"|mixiurl %}'><img src="{%$staticUrl%}/apps/restaurant/mobile/img/food/a01.gif" width="70" style="border:1px;border-color:#CCC;border-style:solid;margin:1px;" /></a>
+                                <a href='{% "$baseUrl/firstlogin/todaymenuconfirm"|mixiurl %}'><img src="{%$staticUrl%}/apps/restaurant/mobile/img/food/a02.gif" width="70" style="border:1px;border-color:#CCC;border-style:solid;margin:1px;" /></a>
+                                <a href='{% "$baseUrl/firstlogin/todaymenuconfirm"|mixiurl %}'><img src="{%$staticUrl%}/apps/restaurant/mobile/img/food/a03.gif" width="70" style="border:1px;border-color:#CCC;border-style:solid;margin:1px;" /></a>
+                            </div>
+                            <div style="text-align:center;">
+                                <a href='{% "$baseUrl/firstlogin/todaymenuconfirm"|mixiurl %}'><img src="{%$staticUrl%}/apps/restaurant/mobile/img/food/a04.gif" width="70" style="border:1px;border-color:#CCC;border-style:solid;margin:1px;" /></a>
+                                <a href='{% "$baseUrl/firstlogin/todaymenuconfirm"|mixiurl %}'><img src="{%$staticUrl%}/apps/restaurant/mobile/img/food/a05.gif" width="70" style="border:1px;border-color:#CCC;border-style:solid;margin:1px;" /></a>
+                                <a href='{% "$baseUrl/firstlogin/todaymenuconfirm"|mixiurl %}'><img src="{%$staticUrl%}/apps/restaurant/mobile/img/food/a06.gif" width="70" style="border:1px;border-color:#CCC;border-style:solid;margin:1px;" /></a>
+                            </div>
+                            <div style="text-align:center;">
+                                <a href='{% "$baseUrl/firstlogin/todaymenuconfirm"|mixiurl %}'><img src="{%$staticUrl%}/apps/restaurant/mobile/img/food/a07.gif" width="70" style="border:1px;border-color:#CCC;border-style:solid;margin:1px;" /></a>
+                                <a href='{% "$baseUrl/firstlogin/todaymenuconfirm"|mixiurl %}'><img src="{%$staticUrl%}/apps/restaurant/mobile/img/food/a08.gif" width="70" style="border:1px;border-color:#CCC;border-style:solid;margin:1px;" /></a>
+                                <a href='{% "$baseUrl/firstlogin/todaymenuconfirm"|mixiurl %}'><img src="{%$staticUrl%}/apps/restaurant/mobile/img/food/a09.gif" width="70" style="border:1px;border-color:#CCC;border-style:solid;margin:1px;" /></a>
+                            </div>
+                            <div style="text-align:center;">
+                                <a href='{% "$baseUrl/firstlogin/todaymenuconfirm"|mixiurl %}'><img src="{%$staticUrl%}/apps/restaurant/mobile/img/food/a10.gif" width="70" style="border:1px;border-color:#CCC;border-style:solid;margin:1px;" /></a>
+                            </div>
+                        </div>
+                        <table><tr><td></td></tr></table>
+                </div><!--/#menu_list-->
+        </div>
+</div>
+
+{%include file="footer.phtml"%}

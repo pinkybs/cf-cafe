@@ -1,0 +1,48 @@
+{%include file="header.phtml"%}
+
+<div id="container">
+        <div id="body">
+                <div id="inlineflash">
+                    <div style="text-align:center">
+                        <object data="{%$staticUrl%}/apps/restaurant/mobile/swf/meng.swf" type="application/x-shockwave-flash" width="240" height="240">
+                            <param name="bgcolor" value="000000" />
+                            <param name="loop" value="off" />
+                            <param name="quality" value="high" />
+                        </object>
+                    </div>
+                </div><!--/#inlineflash -->
+                <div class="label">
+                    <div style="background:#69ac16;text-align:center;font-size:xx-small;color:#FFF">
+                            <table><tr><td></td></tr></table>
+                            デコレーション
+                            <table><tr><td></td></tr></table>
+                    <img src="{%$staticUrl%}/apps/restaurant/mobile/img/label_line.gif" width="100%" height="10px" />
+                    </div>
+                </div>
+                <div style="text-align:center;font-size:xx-small">
+                    [<a href='{% "$baseUrl/shop"|mixiurl %}'>ショップ</a>｜<a href='{% "$baseUrl/decoration"|mixiurl %}'>購入したデコ</a>]
+                </div>
+                <table><tr><td></td></tr></table>
+                <a href='{% "$baseUrl/flash/trydecoration/did/1"|mixiurl %}'>aaaaaaaa</a>×{%$userDecoration.count%}&nbsp;
+                <div class="deco_list">
+                    {% foreach from=$decoration item=userDecoration name=deco %}
+                        {% if $smarty.foreach.deco.iteration % 3 == 0 %}
+                        <div style="text-align:center;">
+                        {% /if %}
+                        
+                            <a href='{% "$baseUrl/flash/trydecoration/did/1"|mixiurl %}'><img src="{%$staticUrl%}/apps/restaurant/mobile/img/decoration/{%$userDecoration.id%}.gif" /></a>×{%$userDecoration.count%}&nbsp;
+                            
+                        {% if $smarty.foreach.deco.iteration % 3 == 0 %}
+                        </div>
+                        {% /if %}
+                    {% /foreach %}
+                    
+                    {%include file="common/pager.phtml"%}
+                </div>
+                <table><tr><td></td></tr></table>
+                </div><!--/.deco_list-->
+                <table><tr><td></td></tr></table>
+        </div>
+</div>
+
+{%include file="footer.phtml"%}

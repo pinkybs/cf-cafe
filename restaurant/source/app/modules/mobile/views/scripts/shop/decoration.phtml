@@ -1,0 +1,53 @@
+{%include file="header.phtml"%}
+
+<div id="container">
+        <div id="body">
+                <div class="label">
+                        <div style="background:#69ac16;text-align:center;font-size:xx-small;color:#FFF">
+                                ｼｮｯﾌﾟ一覧
+                        </div>
+                </div>
+                <table><tr><td></td></tr></table>
+                <div class="shop_menu" style="text-align:center;font-size:xx-small">
+                        <div style="text-align:center;">
+                                <img src="{%$staticUrl%}/apps/restaurant/mobile/img/dotted.gif" width="240px" height="1px" style="margin-top:3px;margin-bottom:3px;" />
+                        </div>
+                        <a href="">机</a>/<a href="">ｲｽ</a>/<a href="">ﾌﾛｱ</a>/<a href="">店舗</a>/<a href="">ｱｲﾃﾑ</a>
+                        <div style="text-align:center;">
+                                <img src="{%$staticUrl%}/apps/restaurant/mobile/img/dotted.gif" width="240px" height="1px" style="margin-top:3px;margin-bottom:3px;" />
+                        </div>
+                </div>
+                <div style="text-align:right;font-size:xx-small">
+                        所持金:5000元<br />
+                        mixiPT:300
+                </div>
+                <table><tr><td></td></tr></table>
+                <div id="deco_list">
+                    {% foreach from=$decoration item=shopDecoration %}
+                    <div style="text-align:left;margin:auto;width:240px">
+                            <img src="{%$staticUrl%}/apps/restaurant/mobile/img/decoration/{%$shopDecoration.id%}.gif" style="float:left;margin-right:5px" align="left" />
+                            {%$shopDecoration.name%}<br />
+                            {% if $paytype == 1%}
+                            値段:{%$shopItem.price%}ﾍﾞｸﾄﾙ<br />
+                            {% else %}
+                            値段:{%$shopItem.mprice%}point<br />
+                            {% /if %}
+                            現在の所持数:{%$shopDecoration.count%}個<br />
+                            <div style="clear:both" clear="all">
+                            {%$shopDecoration.description%}
+                            </div>
+                            <div style="text-align:right;">
+                                    <a href='{% "$baseUrl/shop/decorationconfirm"|mixiurl %}'>試用する</a>
+                            </div>
+                    </div>
+                    <img src="{%$staticUrl%}/apps/restaurant/mobile/img/green_line.gif" width="100%" height="2px" style="margin-top:3px;margin-bottom:3px" />
+                    {% /foreach %}
+                     
+                    {%include file="common/pager.phtml"%}
+                </div>
+                <table><tr><td></td></tr></table>
+                </div><!--/#shop_list-->
+        </div>
+</div>
+
+{%include file="footer.phtml"%}

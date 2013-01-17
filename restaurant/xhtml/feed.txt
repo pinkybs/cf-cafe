@@ -1,0 +1,5 @@
+○○さんがレストランをオープンさせました,restaurant.php
+○○さんが本日のメニューを決めました,cook_complete.php
+○○さんが新しいレシピを習得しました,get_complete.php
+〇〇さんにリクエストしました,friend_request_complete.php
+○○さんの代わりに買出しにいきました,friend_shopping_complete.php

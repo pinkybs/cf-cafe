@@ -1,0 +1,51 @@
+{%include file="header.phtml"%}
+
+<div id="container">
+        <div id="body">
+                <div style="background:#69ac16;text-align:center;font-size:xx-small;color:#FFF">
+                        料理リスト
+                        <img src="{%$staticUrl%}/apps/restaurant/mobile/img/label_line.gif" width="100%" height="10px" />
+                </div>
+                <table><tr><td></td></tr></table>
+                <div style="text-align:center;font-size:xx-small">
+                        <a href='{% "$baseUrl/mobile/recipe/recipelist?CF_genre=1"|mixiurl %}'>ｻﾗﾀﾞ</a>/<a href='{% "$baseUrl/mobile/recipe/recipelist?CF_genre=2"|mixiurl %}'>前菜</a>/
+                        <a href='{% "$baseUrl/mobile/recipe/recipelist?CF_genre=3"|mixiurl %}'>ｽｰﾌﾟ</a>/<a href='{% "$baseUrl/mobile/recipe/recipelist?CF_genre=4"|mixiurl %}'>ﾒｲﾝ他</a>/
+                        <a href='{% "$baseUrl/mobile/recipe/recipelist?CF_genre=5"|mixiurl %}'>ﾒｲﾝ魚</a><br />
+                        <a href='{% "$baseUrl/mobile/recipe/recipelist?CF_genre=6"|mixiurl %}'>ﾒｲﾝ肉</a>/<a href='{% "$baseUrl/mobile/recipe/recipelist?CF_genre=7"|mixiurl %}'>ﾋﾟｻﾞ</a>/
+                        <a href='{% "$baseUrl/mobile/recipe/recipelist?CF_genre=8"|mixiurl %}'>ﾘｿﾞｯﾄ</a>/<a href='{% "$baseUrl/mobile/recipe/recipelist?CF_genre=9"|mixiurl %}'>ﾊﾟｽﾀ</a>/
+                        <a href="covering.php">まかない料理</a>
+                </div>
+                <table><tr><td></td></tr></table>
+                <div id="menu_list">
+                        <div style="font-size:x-small;background:#f6f6f6;">
+                                <img src="{%$staticUrl%}/apps/restaurant/mobile/img/h.gif" width="5px" height="17px" style="float:left;margin-right:2px" align="left" />
+                                                                {%$genreName%}
+                                <div style="clear:both;" clear="all">
+                                <img src="{%$staticUrl%}/apps/restaurant/mobile/img/line.gif" width="100%" height="1px" />
+                                </div>
+                        </div>
+                        <table><tr><td></td></tr></table>
+                        <div style="text-align:center;font-size:xx-small">
+                                <span style="color:#F00">{%$userCount%}</span>/{%$nbCount%}
+                        </div>
+                        <table><tr><td></td></tr></table>
+                        <div class="cook_sum" style="width:240;margin:auto;text-align:center;background:#">
+                                <div style="text-align:center;">
+                            {% foreach from=$recipeList item=recipe key=index%}
+                                        {% if $recipe.isDisplay %}
+                                        <a href='{% "$baseUrl/mobile/recipe/recipedetail?CF_recipe_id=`$recipe.recipe_id`"|mixiurl %}'>
+                                            <img src="{%$staticUrl%}/apps/restaurant/mobile/img/recipe/{%$recipe.genre%}/{%$recipe.recipe_id%}.gif" width="60" style="border:1px;border-color:#CCC;border-style:solid;margin:5px;" />
+                                        </a>
+                                        {% else %}
+                                            <img src="{%$staticUrl%}/apps/restaurant/mobile/img/food/d01.gif" width="60" style="border:1px;border-color:#CCC;border-style:solid;margin:5px;" />
+                                        {% /if %}
+                            {% if $index % 3 == 2 %}</div><div style="text-align:center;">{% /if %}
+                            {% /foreach %}
+
+                        </div>
+                        <table><tr><td></td></tr></table>
+                </div><!--/#menu_list-->
+        </div>
+</div>
+
+{%include file="footer.phtml"%}

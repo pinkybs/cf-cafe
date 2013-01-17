@@ -1,0 +1,27 @@
+{%include file="header.phtml"%}
+
+<div id="container">
+        <div id="body">
+                <div id="deco_setting_complete">
+                        <div class="label">
+                                <div style="background:#69ac16;text-align:center;font-size:xx-small;color:#FFF">
+                                        {%$decoration.name%}
+                                </div>
+                        </div>
+                        <table><tr><td></td></tr></table>
+                        <div style="text-align:center;">
+                                <img src="{%$staticUrl%}/apps/restaurant/mobile/img/decoration/{%$decoration.id%}.gif" />
+                        </div>
+                        <div style="text-align:center;font-size:xx-small">
+                                {%$decoration.name%}を設置しました！
+                        </div>
+                        <div style="text-align:left;font-size:xx-small">
+                                Enterでindexページへ
+                                <a href='{% "$baseUrl/restaurant"|mixiurl %}'>indexへ</a>
+                        </div>
+                        <table><tr><td></td></tr></table>
+                </div><!--/#menu_list-->
+        </div>
+</div>
+
+{%include file="footer.phtml"%}

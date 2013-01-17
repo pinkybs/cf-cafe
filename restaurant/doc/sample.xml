@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+	<food_list>
+		<food>
+                <id>a01</id>
+                <name>ルッコラのサラダ</name>
+                <level>
+                        <id>1</id>
+                        <getexp>0.7</getexp>
+                        <getpoint>19</getpoint>
+                        <cost>5</cost>
+                        <nextlevel>10</nextlevel>
+                </level>
+                <level>
+                        <id>2</id>
+                        <getexp>0.7</getexp>
+                        <getpoint>19</getpoint>
+                        <cost>5</cost>
+                        <nextlevel>10</nextlevel>
+                </level>
+                <level>
+                        <id>3</id>
+                        <getexp>0.7</getexp>
+                        <getpoint>19</getpoint>
+                        <cost>5</cost>
+                        <nextlevel>10</nextlevel>
+                </level>
+                <level>
+                        <id>4</id>
+                        <getexp>0.7</getexp>
+                        <getpoint>19</getpoint>
+                        <cost>5</cost>
+                        <nextlevel>10</nextlevel>
+                </level>
+                <level>
+                        <id>5</id>
+                        <getexp>0.7</getexp>
+                        <getpoint>19</getpoint>
+                        <cost>5</cost>
+                        <nextlevel>10</nextlevel>
+                </level>
+		</food>
+		<food>......</food>
+		<food>......</food>
+	</food_list>
+</database>
